@@ -58,6 +58,11 @@ public class Calculadora_IU extends javax.swing.JFrame {
         });
 
         btnMultiplicar.setText("MULTIPLICAR");
+        btnMultiplicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMultiplicarActionPerformed(evt);
+            }
+        });
 
         btnDividir.setText("DIVIDIR");
 
@@ -133,6 +138,19 @@ public class Calculadora_IU extends javax.swing.JFrame {
         txtNRO2.setText("");
 
     }//GEN-LAST:event_btnRESTARActionPerformed
+
+    private void btnMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicarActionPerformed
+        // TODO add your handling code here:
+        double nro1 = Double.parseDouble(TXTnro1.getText());
+        double nro2 = Double.parseDouble(txtNRO2.getText());
+
+        double multiplicar = nro1 + nro2;
+        JOptionPane.showMessageDialog(this, "multiplicar ES: " + multiplicar);
+
+        TXTnro1.setText("");
+        txtNRO2.setText("");
+
+    }//GEN-LAST:event_btnMultiplicarActionPerformed
 
     /**
      * @param args the command line arguments

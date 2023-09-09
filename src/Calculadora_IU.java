@@ -51,6 +51,11 @@ public class Calculadora_IU extends javax.swing.JFrame {
         });
 
         btnRESTAR.setText("RESTAR");
+        btnRESTAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRESTARActionPerformed(evt);
+            }
+        });
 
         btnMultiplicar.setText("MULTIPLICAR");
 
@@ -108,13 +113,26 @@ public class Calculadora_IU extends javax.swing.JFrame {
         double nro2 = Double.parseDouble(txtNRO2.getText());
 
         double suma = nro1 + nro2;
-        JOptionPane.showMessageDialog(this, "LA SUM ES: " + suma);
+        JOptionPane.showMessageDialog(this, "LA SUMA ES: " + suma);
 
         TXTnro1.setText("");
         txtNRO2.setText("");
 
 
     }//GEN-LAST:event_btnSumarActionPerformed
+
+    private void btnRESTARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRESTARActionPerformed
+        // TODO add your handling code here:
+        double nro1 = Double.parseDouble(TXTnro1.getText());
+        double nro2 = Double.parseDouble(txtNRO2.getText());
+
+        double resta = nro1 + nro2;
+        JOptionPane.showMessageDialog(this, "LA RESTA ES: " + resta);
+
+        TXTnro1.setText("");
+        txtNRO2.setText("");
+
+    }//GEN-LAST:event_btnRESTARActionPerformed
 
     /**
      * @param args the command line arguments
